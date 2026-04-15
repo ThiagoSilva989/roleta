@@ -1,0 +1,177 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+background:linear-gradient(135deg,#1a1a1a,#0f0f0f);
+color:#fff;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:12px;
+}
+
+.container{
+width:100%;
+max-width:420px;
+padding:20px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+h1{text-align:center;margin-bottom:12px}
+
+textarea{
+width:100%;
+height:90px;
+resize:none;
+padding:12px;
+border-radius:14px;
+border:none;
+background:#2a2a2a;
+color:#fff;
+margin-bottom:10px;
+}
+
+.toggle{
+font-size:14px;
+margin-bottom:10px;
+display:flex;
+gap:6px;
+align-items:center;
+}
+
+.controls{
+display:flex;
+gap:10px;
+margin-bottom:14px;
+}
+
+button{
+flex:1;
+padding:12px;
+border:none;
+border-radius:14px;
+font-weight:600;
+cursor:pointer;
+}
+
+.spin{
+background:linear-gradient(135deg,#7c5cff,#5b3df5);
+color:#fff;
+}
+
+.reset{
+background:#2a2a2a;
+color:#ccc;
+}
+
+.roulette-container{
+position:relative;
+width:100%;
+max-width:260px;
+aspect-ratio:1/1;
+margin:30px auto;
+}
+
+.roulette{
+width:100%;
+height:100%;
+border-radius:50%;
+}
+
+.slice{
+position:absolute;
+width:100%;
+height:100%;
+border-radius:50%;
+}
+
+.slice span{
+position:absolute;
+top:50%;
+left:50%;
+transform-origin:center;
+transform:translate(-50%,-50%) rotate(calc(var(--angle)/2)) translateY(-95px);
+font-size:clamp(10px,2.5vw,14px);
+width:clamp(60px,20vw,90px);
+text-align:center;
+}
+
+.arrow{
+position:absolute;
+top:-20px;
+left:50%;
+transform:translateX(-50%);
+border-left:12px solid transparent;
+border-right:12px solid transparent;
+border-top:20px solid #fff;
+}
+
+.result{
+text-align:center;
+font-size:18px;
+margin-top:10px;
+min-height:24px;
+}
+
+.history{
+margin-top:12px;
+padding:10px;
+border-radius:12px;
+background:#2a2a2a;
+max-height:100px;
+overflow:auto;
+font-size:13px;
+}
+
+/* vencedor */
+.winner{
+box-shadow:0 0 25px rgba(255,255,255,0.6),
+           inset 0 0 20px rgba(255,255,255,0.4);
+animation:glow 1s infinite alternate;
+}
+
+@keyframes glow{
+from{filter:brightness(1);}
+to{filter:brightness(1.6);}
+}
+
+/* confete */
+.confetti{
+position:fixed;
+width:8px;
+height:8px;
+top:0;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(100vh) rotate(720deg);
+opacity:0;
+}
+}
+
+/* footer profissional */
+.footer{
+margin-top:20px;
+text-align:center;
+font-size:13px;
+color:#aaa;
+opacity:.8;
+letter-spacing:0.5px;
+}
+
+.footer strong{
+background:linear-gradient(135deg,#7c5cff,#5b3df5);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.footer:hover{
+opacity:1;
+}

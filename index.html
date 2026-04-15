@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roleta Cassino</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+<h1> Roleta</h1>
+
+<textarea id="names">João
+Maria
+Pedro
+Ana</textarea>
+
+<div class="toggle">
+<input type="checkbox" id="noRepeat"> Não repetir
+</div>
+
+<div class="controls">
+<button class="spin" onclick="spin()">Girar</button>
+<button class="reset" onclick="resetAll()">Resetar</button>
+</div>
+
+<div class="roulette-container">
+<div class="arrow"></div>
+<div class="roulette" id="roulette"></div>
+</div>
+
+<div class="result" id="result"></div>
+<div class="history" id="history"><b>Histórico:</b></div>
+</div>
+
+<footer class="footer">
+  Feito por <strong>Thiago Silva</strong>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
